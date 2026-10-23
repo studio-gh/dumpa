@@ -23,6 +23,9 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: .
+          name: dumpa-site
       - name: Publicar no GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          artifact_name: dumpa-site
