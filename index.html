@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f5efe6">
+<title>Dumpa · Tire da cabeça. Encontre quando precisar.</title>
+<style>
+:root{--bg:#f5efe6;--paper:#fffdf9;--ink:#28251f;--muted:#777066;--line:#e6ddd1;--accent:#d76d48;--accent-dark:#a84729;--green:#486d58;--shadow:0 10px 30px #49351a0a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,textarea{font:inherit}button{cursor:pointer}a{color:inherit}.shell{max-width:980px;margin:auto;padding:20px 18px 88px}.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 0 26px}.brand{font-size:30px;font-weight:850;letter-spacing:-1.7px}.brand span{color:var(--accent)}.beta{font-size:11px;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--line);padding:5px 9px;border-radius:99px;color:var(--muted)}.hero{padding:12px 0 24px;max-width:620px}.eyebrow{color:var(--accent-dark);font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}.hero h1{font-size:clamp(32px,7vw,54px);letter-spacing:-1.9px;line-height:1.06;margin:10px 0 12px}.hero p{color:var(--muted);font-size:17px;margin:0}.layout{display:grid;grid-template-columns: minmax(0,1fr) minmax(0,1.05fr);gap:18px;align-items:start}.panel{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:var(--shadow)}h2{font-size:19px;letter-spacing:-.4px;margin:0 0 14px}.field{display:block;width:100%;border:1px solid var(--line);background:#fffefa;border-radius:13px;padding:13px 14px;color:var(--ink);outline:none}.field:focus{border-color:var(--accent);box-shadow:0 0 0 3px #d76d4820}textarea.field{resize:vertical;min-height:118px}.stack{display:grid;gap:10px}.actions{display:flex;gap:9px;flex-wrap:wrap}.btn{border:0;border-radius:12px;padding:11px 15px;font-weight:750}.primary{background:var(--accent);color:white}.primary:hover{background:var(--accent-dark)}.secondary{background:#f2e9de;color:var(--ink)}.quiet{background:transparent;border:1px solid var(--line);color:var(--muted)}.hint{font-size:12px;color:var(--muted);margin:9px 0 0}.notice{font-size:12px;color:#755a34;background:#fbf1df;padding:10px 12px;border-radius:12px;margin-top:13px}.searchbar{display:flex;gap:8px;margin-bottom:12px}.searchbar .field{min-width:0}.filters{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:14px}.chip{border:1px solid var(--line);background:transparent;border-radius:99px;padding:7px 12px;font-size:13px;color:var(--muted)}.chip.active{background:var(--ink);border-color:var(--ink);color:white}.count{font-size:12px;color:var(--muted);margin-bottom:12px}.items{display:grid;gap:10px}.item{border:1px solid var(--line);border-radius:15px;padding:13px;background:#fffefa;display:grid;grid-template-columns:60px minmax(0,1fr);gap:12px;align-items:start}.thumb{width:60px;height:60px;object-fit:cover;border-radius:10px;background:#f0e6da;display:flex;align-items:center;justify-content:center;color:var(--accent-dark);font-size:22px}.item-title{font-weight:750;overflow-wrap:anywhere}.item-text{font-size:13px;color:var(--muted);white-space:pre-wrap;overflow-wrap:anywhere;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;margin-top:3px}.meta{font-size:11px;color:var(--muted);margin-top:7px;display:flex;gap:8px;flex-wrap:wrap}.item-actions{display:flex;gap:8px;margin-top:9px;flex-wrap:wrap}.text-button{border:0;padding:0;background:transparent;color:var(--accent-dark);font-size:12px;font-weight:750}.empty{text-align:center;padding:28px 10px;color:var(--muted)}.empty strong{display:block;color:var(--ink);font-size:16px;margin-bottom:5px}.bottom-note{margin-top:18px;color:var(--muted);font-size:12px;text-align:center}.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--ink);color:white;padding:12px 16px;border-radius:12px;box-shadow:var(--shadow);max-width:calc(100vw - 30px);font-size:14px;z-index:10}.hidden{display:none!important}.modal-backdrop{position:fixed;inset:0;background:#211d19a8;display:grid;place-items:center;padding:20px;z-index:20}.modal{background:var(--paper);border-radius:18px;padding:20px;max-width:460px;width:100%}.modal h2{margin-top:0}.small{font-size:13px;color:var(--muted)}
+@media(max-width:720px){.shell{padding:14px 13px 36px}.top{padding-bottom:18px}.layout{grid-template-columns:1fr}.hero{padding-top:5px}.hero h1{font-size:39px}.panel{padding:16px;border-radius:18px}.brand{font-size:27px}.item{grid-template-columns:52px minmax(0,1fr);padding:11px}.thumb{width:52px;height:52px}}
+</style>
+</head>
+<body>
+<div class="shell">
+<header class="top"><div class="brand">dumpa<span>.</span></div><div class="beta">Primeiro teste · V0.1</div></header>
+<section class="hero"><div class="eyebrow">Um lugar para deixar as coisas</div><h1>Tire da cabeça.<br>Encontre quando precisar.</h1><p>Guarde links, prints e ideias aqui. Depois, procure sem precisar vasculhar conversas antigas.</p></section>
+<div class="layout">
+<section class="panel">
+<h2>O que você quer guardar?</h2>
+<form id="saveForm" class="stack">
+<textarea id="content" class="field" placeholder="Cole um link, escreva uma ideia ou anote algo para lembrar…" aria-label="Link ou ideia para guardar"></textarea>
+<input id="title" class="field" placeholder="Um título (opcional)" aria-label="Título opcional">
+<label class="btn secondary" for="imageInput" style="text-align:center">＋ Adicionar um print ou imagem</label>
+<input id="imageInput" type="file" accept="image/*" class="hidden" aria-label="Escolher imagem">
+<div id="imagePreviewWrap" class="hidden"><img id="imagePreview" alt="Prévia da imagem escolhida" style="max-width:100%;max-height:190px;border-radius:12px;object-fit:contain"><button type="button" id="removeImage" class="text-button">Remover imagem</button></div>
+<button class="btn primary" type="submit">Guardar</button>
+</form>
+<p class="hint">Nesta versão, seus itens ficam salvos neste navegador e neste aparelho.</p>
+<div class="notice">Versão de teste: não há conta nem sincronização entre aparelhos ainda. Evite guardar informações privadas ou sensíveis.</div>
+</section>
+<section class="panel">
+<h2>Tudo o que você guardou</h2>
+<div class="searchbar"><input id="search" class="field" placeholder="O que você está procurando?" aria-label="Buscar itens"><button id="clearSearch" class="btn quiet" type="button" aria-label="Limpar busca">Limpar</button></div>
+<div class="filters" role="group" aria-label="Filtrar itens"><button class="chip active" data-filter="todos">Tudo</button><button class="chip" data-filter="imagem">Imagens</button><button class="chip" data-filter="link">Links</button><button class="chip" data-filter="texto">Textos</button></div>
+<div id="count" class="count">0 itens</div><div id="items" class="items"></div>
+</section>
+</div>
+<div class="bottom-note">Dumpa é um protótipo em teste. Seu feedback ajuda a decidir o que construir a seguir.</div>
+</div>
+<div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+<div id="deleteModal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="deleteTitle"><div class="modal"><h2 id="deleteTitle">Apagar este item?</h2><p class="small">Ele será removido deste navegador. Essa ação não pode ser desfeita.</p><div class="actions"><button id="cancelDelete" class="btn secondary">Voltar</button><button id="confirmDelete" class="btn primary">Apagar item</button></div></div></div>
+<script>
+const KEY='dumpa-mvp-items-v1';let selectedImage=null,filter='todos',deleteId=null,toastTimer;
+const $=id=>document.getElementById(id);
+function readItems(){try{return JSON.parse(localStorage.getItem(KEY)||'[]')}catch{return []}}
+function writeItems(items){try{localStorage.setItem(KEY,JSON.stringify(items));return true}catch(e){return false}}
+function escapeHTML(s=''){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function safeURL(s){try{const u=new URL(s);return ['http:','https:'].includes(u.protocol)?u.href:null}catch{return null}}
+function itemType(item){return item.image?'imagem':safeURL(item.content.trim())?'link':'texto'}
+function showToast(msg){$('toast').textContent=msg;$('toast').classList.remove('hidden');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').classList.add('hidden'),3000)}
+function formatDate(ts){return new Intl.DateTimeFormat('pt-BR',{dateStyle:'short',timeStyle:'short'}).format(new Date(ts))}
+function render(){let items=readItems().sort((a,b)=>b.createdAt-a.createdAt);const q=$('search').value.trim().toLocaleLowerCase('pt-BR');items=items.filter(i=>(filter==='todos'||itemType(i)===filter)&&(!q||[i.title,i.content,i.imageName].filter(Boolean).join(' ').toLocaleLowerCase('pt-BR').includes(q)));$('count').textContent=items.length+' '+(items.length===1?'item':'itens');$('items').innerHTML='';if(!items.length){$('items').innerHTML='<div class="empty"><strong>'+(q?'Ainda não encontrei.':'Ainda não há nada por aqui.')+'</strong>'+(q?'Tente outras palavras. Esta versão procura no texto que você guardou.':'Quando guardar alguma coisa, ela vai aparecer aqui.')+'</div>';return}for(const i of items){const type=itemType(i);const thumb=i.image?'<img class="thumb" src="'+i.image+'" alt="Imagem guardada">':'<div class="thumb">'+(type==='link'?'↗': '✎')+'</div>';const preview=i.image?(i.content||i.imageName||'Imagem guardada'):i.content;const url=type==='link'?safeURL(i.content.trim()):null;const el=document.createElement('article');el.className='item';el.innerHTML=thumb+'<div><div class="item-title">'+escapeHTML(i.title|| (type==='link'?'Link guardado':type==='imagem'?'Imagem guardada':'Anotação'))+'</div><div class="item-text">'+escapeHTML(preview)+'</div><div class="meta"><span>'+({imagem:'Imagem',link:'Link',texto:'Texto'}[type])+'</span><span>'+formatDate(i.createdAt)+'</span></div><div class="item-actions">'+(url?'<a class="text-button" href="'+escapeHTML(url)+'" target="_blank" rel="noopener noreferrer">Abrir link ↗</a>':'')+'<button class="text-button" data-delete="'+escapeHTML(i.id)+'">Apagar</button></div></div>';$('items').appendChild(el)}}
+$('saveForm').addEventListener('submit',e=>{e.preventDefault();const content=$('content').value.trim();if(!content&&!selectedImage){showToast('Escreva algo ou adicione uma imagem.');return}const items=readItems();const item={id:crypto.randomUUID?crypto.randomUUID():String(Date.now()),title:$('title').value.trim(),content,image:selectedImage?.data||null,imageName:selectedImage?.name||'',createdAt:Date.now()};items.push(item);if(!writeItems(items)){showToast('Não consegui guardar. O espaço deste navegador pode estar cheio.');return}$('content').value='';$('title').value='';selectedImage=null;$('imageInput').value='';$('imagePreviewWrap').classList.add('hidden');render();showToast('Pronto, ficou guardado.')});
+$('imageInput').addEventListener('change',e=>{const file=e.target.files?.[0];if(!file)return;if(!file.type.startsWith('image/')){showToast('Escolha um arquivo de imagem.');return}if(file.size>2*1024*1024){showToast('Para este teste, escolha uma imagem de até 2 MB.');e.target.value='';return}const reader=new FileReader();reader.onload=()=>{const img=new Image();img.onload=()=>{const max=1200,scale=Math.min(1,max/Math.max(img.width,img.height));const canvas=document.createElement('canvas');canvas.width=Math.round(img.width*scale);canvas.height=Math.round(img.height*scale);canvas.getContext('2d').drawImage(img,0,0,canvas.width,canvas.height);const data=canvas.toDataURL('image/jpeg',.78);selectedImage={data,name:file.name};$('imagePreview').src=data;$('imagePreviewWrap').classList.remove('hidden')};img.src=reader.result};reader.readAsDataURL(file)});
+$('removeImage').addEventListener('click',()=>{selectedImage=null;$('imageInput').value='';$('imagePreviewWrap').classList.add('hidden')});
+$('search').addEventListener('input',render);$('clearSearch').addEventListener('click',()=>{$('search').value='';render();$('search').focus()});
+document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{filter=b.dataset.filter;document.querySelectorAll('[data-filter]').forEach(x=>x.classList.toggle('active',x===b));render()}));
+$('items').addEventListener('click',e=>{const b=e.target.closest('[data-delete]');if(!b)return;deleteId=b.dataset.delete;$('deleteModal').classList.remove('hidden')});
+$('cancelDelete').addEventListener('click',()=>{$('deleteModal').classList.add('hidden');deleteId=null});
+$('confirmDelete').addEventListener('click',()=>{if(deleteId){writeItems(readItems().filter(i=>i.id!==deleteId));deleteId=null;render();showToast('Item apagado.')} $('deleteModal').classList.add('hidden')});
+render();
+</script>
+</body>
+</html>
